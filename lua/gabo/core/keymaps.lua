@@ -14,17 +14,17 @@ keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
-keymap.set("n", "<Leader>p", '"0p')
-keymap.set("n", "<Leader>P", '"0P')
-keymap.set("v", "<Leader>p", '"0p')
-keymap.set("n", "<Leader>c", '"_c')
-keymap.set("n", "<Leader>C", '"_C')
-keymap.set("v", "<Leader>c", '"_c')
-keymap.set("v", "<Leader>C", '"_C')
-keymap.set("n", "<Leader>d", '"_d')
-keymap.set("n", "<Leader>D", '"_D')
-keymap.set("v", "<Leader>d", '"_d')
-keymap.set("v", "<Leader>D", '"_D')
+keymap.set("n", "<leader>p", '"0p')
+keymap.set("n", "<leader>P", '"0P')
+keymap.set("v", "<leader>p", '"0p')
+keymap.set("n", "<leader>c", '"_c')
+keymap.set("n", "<leader>C", '"_C')
+keymap.set("v", "<leader>c", '"_c')
+keymap.set("v", "<leader>C", '"_C')
+keymap.set("n", "<leader>d", '"_d')
+keymap.set("n", "<leader>D", '"_D')
+keymap.set("v", "<leader>d", '"_d')
+keymap.set("v", "<leader>D", '"_D')
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>", { desc = "Increment number" }) -- increment
@@ -34,7 +34,7 @@ keymap.set("n", "-", "<C-x>", { desc = "Decremet number" }) -- decrement
 keymap.set("n", "dw", 'vb"_d', { desc = "Delete a word backwards" })
 
 -- From theprimeagen
-keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "To enter file explore" })
+-- keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "To enter file explore" })
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move highlight file UP" })
 keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move highlight file DOWN" })
@@ -49,8 +49,8 @@ keymap.set("n", "N", "Nzzzv")
 -- keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
 
 -- Disable continuations
-keymap.set("n", "<Leader>o", "o<Esc>^Da", opts)
-keymap.set("n", "<Leader>O", "O<Esc>^Da", opts)
+keymap.set("n", "<leader>o", "o<Esc>^Da", opts)
+keymap.set("n", "<leader>O", "O<Esc>^Da", opts)
 
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
@@ -69,15 +69,17 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew<CR>", { desc = "Open current buffer i
 
 -- WINDOWS
 -- Split window
-keymap.set("n", "ss", ":split<Return>", { desc = "Split window horizontally" })
-keymap.set("n", "sv", ":vsplit<Return>", { desc = "Split window vertically" })
+keymap.set("n", "<leader>sh", ":split<Return>", { desc = "Split window horizontally" })
+keymap.set("n", "<leader>sv", ":vsplit<Return>", { desc = "Split window vertically" })
 -- Close window
-keymap.set("n", "sx", "<cmd>close<CR>", { desc = "Close current window" })
+keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current window" })
 -- Move window
-keymap.set("n", "sh", "<C-w>h")
-keymap.set("n", "sk", "<C-w>k")
-keymap.set("n", "sj", "<C-w>j")
-keymap.set("n", "sl", "<C-w>l")
+-- keymap.set("n", "sh", "<C-w>h", { desc = "Move window to the left" })
+-- keymap.set("n", "sk", "<C-w>k", { desc = "Move windows up" })
+-- keymap.set("n", "sj", "<C-w>j", { desc = "Move window down" })
+-- keymap.set("n", "sl", "<C-w>l", { desc = "Move window to the right" })
+-- Make split equal size
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 
 -- Resize window
 -- keymap.set("n", "<C-w><left>", "<C-w><")

@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
+		{ "roobert/tailwindcss-colorizer-cmp.nvim", config = true }, -- para configurar lo de los colores en tailwindcss
 		{
 			"L3MON4D3/LuaSnip",
 			-- follow latest release.
@@ -59,6 +60,7 @@ return {
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),
+				require("tailwindcss-colorizer-cmp").formatter,
 			},
 		})
 	end,
